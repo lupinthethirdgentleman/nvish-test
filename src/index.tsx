@@ -5,21 +5,15 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
-import Root from "./routes/root";
+import Landing from "./routes/landing";
 import ErrorPage from "./error-page";
-import Contact from "./routes/contact";
+import 'bootstrap/dist/css/bootstrap.css'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <Landing />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "contacts/:contactId",
-        element: <Contact />,
-      },
-    ],
   },
 ]);
 
